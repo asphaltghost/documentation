@@ -1,38 +1,26 @@
----
-sidebar_position: 1
-slug: /
----
+# AsphaltGhost – Ueberblick
 
-# AsphaltGhost Documentation
+AsphaltGhost ist eine mobile Community-App fuer die Auto-Szene: Drift-Spots und Tuning-Treffen finden, einreichen und bewerten, plus Community-Feed.
 
-Welcome to the AsphaltGhost documentation site.
+## Tech Stack
 
-## Getting Started (5 Minuten)
+- **App:** Expo SDK 54, Expo Router v6, TypeScript, React Query, Zustand
+- **Karte:** react-native-maps mit Google Maps (PROVIDER_GOOGLE)
+- **Backend:** Supabase (Auth, PostgreSQL, Storage, Edge Functions)
+- **Push:** Expo Notifications (Moderator-Benachrichtigungen, taegliche Erinnerung optional)
 
-1. Clone:
-   - `git clone --recurse-submodules git@github.com:AsphaltGhost/base-app.git`
-2. Install:
-   - `cd base-app`
-   - `npm install`
-3. Configure env:
-   - `.env.example` zu `.env` kopieren
-   - `EXPO_PUBLIC_SUPABASE_URL`, `EXPO_PUBLIC_SUPABASE_ANON_KEY`, `EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN` setzen
-4. Build Android Dev Client (wegen Mapbox):
-   - `npx expo run:android`
-5. Start App:
-   - `npx expo start --dev-client`
+## Kernfunktionen (MVP)
 
-## Overview
+- **Auth:** Login mit E-Mail oder Username; Profil mit optionalem Vor-/Nachnamen
+- **Spot-Map:** Karte mit approved Spots, Filter, Ghost-Marker, Spot-Detail als Modal
+- **Spot einreichen:** Adresssuche + Kartenauswahl; KI-Analyse; Bild-Safety
+- **Bewertung und Kommentare:** 1-5 Sterne, Kommentar; Bewertung bearbeiten/loeschen
+- **Feed:** Chronologischer Feed, Post erstellen, Like/Kommentar, Post-Detail
+- **Moderation:** Pending Spots und Reports; Moderatoren-Push
+- **Admin:** Moderatoren zuweisen; User loeschen
+- **Einstellungen:** Map-Style, Haptik, Push-Erinnerung; Profil/Account; Account loeschen (2-Schritt)
 
-This site centralizes setup, architecture, database, design, deployment, and MVP handoff documentation for `base-app`.
+## Weitere Docs
 
-## Documentation Index
-
-- [Setup](./setup)
-- [Architecture](./architecture)
-- [Database](./database)
-- [Design](./design)
-- [Deployment](./deployment)
-- [Decisions (ADR Light)](./decisions)
-- [MVP Acceptance Checklist](./mvp-acceptance)
-- [Troubleshooting](./troubleshooting)
+- Repo `docs/`: ARCHITECTURE, DATABASE, SETUP, DEPLOYMENT, DECISIONS, DESIGN
+- Plan: `asphaltghost-mvp-plan.md`
