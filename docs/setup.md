@@ -27,6 +27,11 @@ Dieses Dokument beschreibt das lokale Setup fuer die AsphaltGhost App (Expo + Su
    - `EXPO_PUBLIC_SUPABASE_URL`
    - `EXPO_PUBLIC_SUPABASE_ANON_KEY`
    - `EXPO_PUBLIC_MAPBOX_ACCESS_TOKEN`
+5. **Google Maps API Key (für Karten-Tab):** In `app.json` den Platzhalter ersetzen:
+   - **iOS:** `expo.ios.config.googleMapsApiKey` → dein Key
+   - **Android:** `expo.android.config.googleMaps.apiKey` → dein Key
+   - Key erstellen: [Google Cloud Console](https://console.cloud.google.com/) → APIs & Services → Credentials → API Key. APIs aktivieren: **Maps SDK for Android**, **Maps SDK for iOS**.
+   - Ohne gültigen Key bleibt die Karte blau/leer (nur „Google“ sichtbar).
 
 ## Android Umgebungsvariablen (PowerShell)
 
