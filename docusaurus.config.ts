@@ -6,7 +6,7 @@ const config: Config = {
   title: "AsphaltGhost Docs",
   tagline: "Documentation for the AsphaltGhost MVP",
 
-  url: "https://asphaltghost.github.io",
+  url: "https://asphaltghost.de",
   baseUrl: "/documentation/",
 
   organizationName: "AsphaltGhost",
