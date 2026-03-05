@@ -26,10 +26,7 @@ Siehe `src/lib/theme.ts`:
 
 ## Map Design
 
-Siehe `src/lib/mapbox.ts`:
-
-- Map Style: `mapbox://styles/mapbox/navigation-night-v1`
-- Marker-Farben nach Spot-Type:
+Karte: react-native-maps mit Google Maps. Optional Custom-JSON-Style (Dark) aus `src/lib/mapbox.ts`. Marker-Farben (GhostMarker) nach Spot-Type:
   - drift: `#7C3AED`
   - meet: `#3B82F6`
   - track: `#10B981`

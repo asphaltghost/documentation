@@ -38,14 +38,16 @@ Spaeter: Store-Release fuer Android und iOS via EAS.
 
 ### Migrationen
 
-- per SQL Editor ausfuehren oder via Supabase CLI Workflow.
+- Migrationen 0001 bis 0024 im SQL Editor ausfuehren (siehe [Database](./database.md)).
 
-### Edge Function
+### Edge Functions
 
-1. Secret setzen:
-   - `supabase secrets set OPENAI_API_KEY=<key>`
+1. Secret: `supabase secrets set OPENAI_API_KEY=<key>` (fuer analyze-spot)
 2. Deploy:
    - `supabase functions deploy analyze-spot`
+   - `supabase functions deploy notify-moderators`
+   - `supabase functions deploy waitlist-signup` (Homepage)
+   - `supabase functions deploy app-config` (Homepage: app_live, Store-URLs)
 
 ## GitHub Pages (docs-site)
 
@@ -58,9 +60,11 @@ Voraussetzungen im `documentation` Repo:
 
 ## Go-Live Check vor Beta
 
-- Auth Signup/Login laeuft
-- Map zeigt approved Spots
-- Submit erstellt pending Spot
-- Moderation kann pending -> approved/rejected setzen
-- Feed Create/Like/Comment laeuft
-- KI Analyse liefert verwertbare Felder
+- Auth: Registrierung/Login (E-Mail oder Username), Abmelden
+- Map: approved Spots (react-native-maps), Filter
+- Spot einreichen: pending Spot (Adresse + Map-Pick), KI-Analyse, Bild-Safety
+- Moderation: pending -> approved/rejected; Reports
+- Feed: Post erstellen, Like, Kommentar; Post-Detail
+- Spot-Detail: Bewertung (Bearbeiten/Loeschen), Kommentare
+- Push: Moderator-Benachrichtigungen; Einstellungen (taegliche Erinnerung, Profil, Account loeschen)
+- Homepage (falls genutzt): Waitlist-Signup, App-Config (app_live, Store-URLs)

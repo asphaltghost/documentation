@@ -20,7 +20,11 @@ AsphaltGhost ist eine mobile Community-App fuer die Auto-Szene: Drift-Spots und 
 - **Admin:** Moderatoren zuweisen; User loeschen
 - **Einstellungen:** Map-Style, Haptik, Push-Erinnerung; Profil/Account; Account loeschen (2-Schritt)
 
+## Homepage (optional)
+
+Separates Vite-Projekt in `homepage/`: Waitlist-Signup und App-Config (app_live, Store-URLs) ueber Edge Functions **waitlist-signup** und **app-config**; kein Supabase-Client im Frontend. Siehe [Setup](./setup.md#optional-homepage-vite).
+
 ## Weitere Docs
 
 - Repo `docs/`: ARCHITECTURE, DATABASE, SETUP, DEPLOYMENT, DECISIONS, DESIGN
-- Plan: `asphaltghost-mvp-plan.md`
+- Plan: `asphaltghost-mvp-plan.md` (vollstaendiger MVP-Bauplan)
